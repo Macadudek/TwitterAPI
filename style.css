@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+:root {
+    --twitter-blue: #1DA1F2;
+    --twitter-darkBlue: #0d8ede;
+    --twitter-darkBlue-fade: rgba(13, 142, 222, 0.1);
+    --darkGrey: #2f3336;
+    --grey: #6e767d;
+    --black: #000
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h5 {
+    font-size: 1.3rem;
+}
+
+.app-settings-container {
+    height: 50px;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #f1f1f1;
+}
+
+.container {
+    border: 1px solid #f1f1f1;
+    width: 50%;
+}
+
+.top-bar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    padding: 0.3rem 2rem;
+}
+
+
+
+.user-name {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.user-name .fa-square-check {
+    border-radius: 50%;
+    color: var(--twitter-blue);
+    font-size: 1.2rem;
+}
+
+/* Profile images */
+
+.background-image {
+    /* background-image: url('https://images.unsplash.com/photo-1616040959673-93489a0c2002?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY4MjQyMTMwNA&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080'); */
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-size: cover;
+    height: 250px;
+    width: 100%;
+}
+
+.profile-img-container {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-top: 0.5rem;
+}
+
+.profile-img {
+    /* background-image: url('https://images.unsplash.com/photo-1628126235206-5260b9ea6441?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY4MjQyMTQ5NQ&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080'); */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    width: 130px;
+    height: 130px;
+    position: absolute;
+    top: -65px;
+    left: 40px;
+}
+
+/* Profile BIO */
+
+.follow-btn {
+    border: none;
+    height: 50%;
+    background-color: var(--twitter-blue);
+    color: #fff;
+    border-radius: 25px;
+    padding: 15px 25px;
+    margin: 0 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.follow-btn:hover {
+    cursor: pointer;
+    background-color: var(--twitter-darkBlue);
+}
+
+.profile-bio {
+    padding:  1rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.5rem;  
+}
+
+/* Feed display settings */
+
+.feed-selector-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.tab {
+    padding: 1rem 1.5rem;
+    width: 25%;
+    white-space: nowrap;
+    border-bottom: 2px solid #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-in;
+}
+
+
+.tab.active {
+    color: var(--twitter-blue);
+    border-bottom: 2px solid var(--twitter-blue);
+}
+
+.tab:hover {
+    cursor: pointer;
+    color: var(--twitter-blue);
+    border-bottom: 2px solid var(--twitter-blue);
+    background-color: var(--twitter-darkBlue-fade);
+}
+
+
+/* Tweets/posts */
+
+.tweet {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0;
+    border: 1px solid #f1f1f1;
+    gap: 2rem;
+}
+
+.profile-icon {
+   width: 70px;
+   height: 70px;
+   background-position: center;
+   background-size: cover;
+   border-radius: 50%;
+   padding: 1rem;
+}
+
+.tweet-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.5rem;
+    width: 65%;
+}
+
+.tweet-icons-container {
+    display: inline-flex;
+    gap: 4rem;
+    color: grey;
+}
+
+.tweet-setting-dots {
+    height: 100px;
+    position: relative;
+}
+
+
+/* Button to change between Elon and Bill */
+
+#elonbtn, #billbtn {
+    border: none;
+    background-color: #fff;
+    padding: 15px 35px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+#elonbtn:hover, #billbtn:hover {
+    cursor: pointer;
+    background-color: var(--twitter-darkBlue-fade);
+    border: 1px solid #f1f1f1;
+    color: var(--twitter-darkBlue);
+}
+
+/* Font Awesome ICONS */
+
+.setting-icon, .twitter-icon {
+    padding: 0 20px;
+    cursor: pointer;
+}
+
+.twitter-icon {
+    color: var(--twitter-blue);
+    font-size: 1.5rem;
+}
+
+.tweet-dots-icon {
+    color: grey;
+    position: absolute;
+    left: 0px;
+    cursor: pointer;
+}
+
+.top-bar .fa-arrow-left {
+    color: var(--twitter-blue);
+    font-size: 1.5rem;
+}
+
+
+@media screen and (min-width: 500px) {
+    .container {
+        max-width: 600px;
+    }
+
+}
